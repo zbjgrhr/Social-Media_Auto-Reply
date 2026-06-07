@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 12px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  color: #111;
+  background: #f6f7f9;
+}
+.top h1 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+.top-actions {
+  margin-top: 8px;
+}
+button.linkish {
+  background: transparent;
+  border: none;
+  color: #1d9bf0;
+  text-decoration: underline;
+  padding: 0;
+}
+.muted {
+  color: #555;
+  margin: 0;
+}
+.small {
+  font-size: 12px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e3e5e8;
+  border-radius:10px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+select {
+  flex: 1;
+  min-width: 140px;
+  padding: 6px;
+}
+button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+button:hover {
+  background: #f0f0f0;
+}
+
+/* 原来的生成草稿按钮 */
+button.start {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #1d9bf0;
+  background: #1d9bf0;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 8px;
+}
+button.start:hover {
+  background: #1786cf;
+}
+
+/* 👇 新加：自动回复按钮 */
+.auto-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+button.auto-start {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+}
+button.auto-stop {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+}
+button.auto-start:disabled {
+  opacity: 0.5;
+}
+button.auto-stop:disabled {
+  opacity: 0.5;
+}
+
+.lang {
+  margin: 8px 0;
+  display: flex;
+  gap: 12px;
+}
+.drafts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.draft {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  background: #fafafa;
+}
+.draft:hover {
+  border-color: #1d9bf0;
+}
+.draft .en {
+  color: #333;
+  margin-top: 4px;
+  font-size: 12px;
+}
+textarea,
+input[type="file"] {
+  width: 100%;
+  margin: 6px 0;
+}
+.preview {
+  max-height: 120px;
+  overflow: auto;
+  background: #111;
+  color: #cfcfcf;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+.warn {
+  margin-top: 8px;
+  padding: 8px;
+  background: #fff4e5;
+  border: 1px solid #f0c36d;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.hidden {
+  display: none;
+}
+
+.autoRow {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+.btnStartAuto,
+.btnStopAuto {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 13px;
+}
+.btnStartAuto {
+  background: #1d9bf0;
+}
+.btnStopAuto {
+  background: #ff3a3a;
+}
+
+.autoReplyRow {
+  margin-top: 0;
+}
+.btnAutoReplyOn,
+.btnAutoReplyOff {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+.btnAutoReplyOn {
+  background: #16a34a;
+}
+.btnAutoReplyOn:hover {
+  background: #15803d;
+}
+.btnAutoReplyOff {
+  background: #64748b;
+}
+.btnAutoReplyOff:hover {
+  background: #475569;
+}
+.autoReplyHint {
+  margin: 0 0 8px;
+}

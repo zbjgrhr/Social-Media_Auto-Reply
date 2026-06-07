@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>自动回复插件</title>
+    <link rel="stylesheet" href="./sidepanel.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>自动回复插件</h1>
+      <p class="muted">
+        生成草稿后，在已打开的 Twitter/X、Facebook、Instagram 私信页点「START
+        自动发送」；默认每 1 分钟发送一条，仅作用于当前活动标签页。点「STOP
+        停止」结束。
+      </p>
+    </header>
+    <div class="autoRow">
+      <button id="startBtn" type="button" class="btnStartAuto">
+        START 自动发送
+      </button>
+      <button id="stopBtn" type="button" class="btnStopAuto">STOP 停止</button>
+    </div>
+    <div class="autoRow autoReplyRow">
+      <button id="autoReplyStartBtn" type="button" class="btnAutoReplyOn">
+        AUTO REPLY 开
+      </button>
+      <button id="autoReplyStopBtn" type="button" class="btnAutoReplyOff">
+        AUTO REPLY 关
+      </button>
+    </div>
+    <p class="muted small autoReplyHint">
+      自动回复仅支持 X / Twitter
+      私信页：检测到对方新消息后，在约 1～30 秒内随机延迟发送一条「回复TD退订」；对方连发时会按最新消息重新计时。
+    </p>
+    <section class="card">
+      <h2>随机草稿（10 条 · 中英）</h2>
+      <button id="btnStart" type="button" class="start">仅生成草稿</button>
+      <div class="lang">
+        <label><input type="radio" name="lang" value="zh" checked /> 中文</label>
+        <label><input type="radio" name="lang" value="en" /> 英文</label>
+        <label><input type="radio" name="lang" value="both" /> 中英一起</label>
+      </div>
+      <p class="muted small">
+        点草稿复制、START 自动发送均遵循上方语言选择（中英一起为中文 + 空行 + 英文）。
+      </p>
+      <div id="drafts" class="drafts"></div>
+      <p class="muted small" id="copiedTip"></p>
+    </section>
+
+    <script type="module" src="./sidepanel.ts"></script>
+  </body>
+</html>
